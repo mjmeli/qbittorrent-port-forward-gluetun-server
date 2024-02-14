@@ -2,7 +2,7 @@
 set -e
 
 _term() {
-  echo "Signal SIGTERM reçu, arrêt en cours..."
+  echo "SIGTERM signal received, shutdown in progress..."
   kill -TERM "$child" 2>/dev/null
 }
 
