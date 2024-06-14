@@ -6,7 +6,7 @@ qbt_password="${QBT_PASSWORD:-adminadmin}"
 qbt_addr="${QBT_ADDR:-http://localhost:8080}" # ex. http://10.0.1.48:8080
 gtn_addr="${GTN_ADDR:-http://localhost:8000}" # ex. http://10.0.1.48:8000
 
-port_number=$(curl --fail --silent --show-error  $GTN_ADDR/v1/openvpn/portforwarded | jq '.port')
+port_number=$(curl --fail --silent --show-error  $gtn_addr/v1/openvpn/portforwarded | jq '.port')
 if [ ! "$port_number" ] || [ "$port_number" = "0" ]; then
     echo "Could not get current forwarded port from gluetun, exiting..."
     exit 1
