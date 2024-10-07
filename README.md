@@ -16,18 +16,18 @@ A shell script and Docker container for automatically setting qBittorrent's list
 
 
 ## Gluetun Control Server Authentication
-1. Generate api key using the following command: `docker run --rm qmcgaw/gluetun genkey`
-2. Create a new file on your Gluetun host system with the following contents:
-```toml# See https://github.com/qdm12/gluetun-wiki/blob/main/setup/advanced/control-server.md for more
+1. Create a new file on your Gluetun host system with the following contents:
+```toml
+# See https://github.com/qdm12/gluetun-wiki/blob/main/setup/advanced/control-server.md for more
 [[roles]]
 name = "qbittorrent"
 # Define a list of routes with the syntax "Http-Method /path"
 routes = ["GET /v1/openvpn/portforwarded"]
 # Define an authentication method with its parameters
 auth = "apikey"
-apikey = "CHANGEME" # generate using "docker run --rm qmcgaw/gluetun genkey"
+apikey = "CHANGEME" # can be generated using "docker run --rm qmcgaw/gluetun genkey"
 ```
-3. Bind mount the file you created to `/gluetun/auth/config.toml`.
+3. Bind mount the file you created to `/gluetun/auth/config.toml` in your gluetun docker instance.
 
 ## Example
 
