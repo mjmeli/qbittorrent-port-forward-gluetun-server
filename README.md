@@ -22,44 +22,44 @@ A shell script and Docker container for automatically setting qBittorrent's list
 
 ### basic
 ```yaml
-  qbittorrent-port-forward-gluetun-server:
-    image: mjmeli/qbittorrent-port-forward-gluetun-server
-    container_name: qbittorrent-port-forward-gluetun-server
-    restart: unless-stopped
-    environment:
-      QBT_USERNAME: username
-      BT_PASSWORD: password
-      QBT_ADDR: http://192.168.1.100:8080
-      GTN_USERNAME: username
-      GTN_PASSWORD: password
-      GTN_ADDR: http://192.168.1.100:8000
+qbittorrent-port-forward-gluetun-server:
+  image: mjmeli/qbittorrent-port-forward-gluetun-server
+  container_name: qbittorrent-port-forward-gluetun-server
+  restart: unless-stopped
+  environment:
+    QBT_USERNAME: username
+    BT_PASSWORD: password
+    QBT_ADDR: http://192.168.1.100:8080
+    GTN_USERNAME: username
+    GTN_PASSWORD: password
+    GTN_ADDR: http://192.168.1.100:8000
 ```
 
 ### apikey
 ```yaml
-  qbittorrent-port-forward-gluetun-server:
-    image: mjmeli/qbittorrent-port-forward-gluetun-server
-    container_name: qbittorrent-port-forward-gluetun-server
-    restart: unless-stopped
-    environment:
-      QBT_USERNAME: username
-      QBT_PASSWORD: password
-      QBT_ADDR: http://192.168.1.100:8080
-      GTN_APIKEY: apikey
-      GTN_ADDR: http://192.168.1.100:8000
+qbittorrent-port-forward-gluetun-server:
+  image: mjmeli/qbittorrent-port-forward-gluetun-server
+  container_name: qbittorrent-port-forward-gluetun-server
+  restart: unless-stopped
+  environment:
+    QBT_USERNAME: username
+    QBT_PASSWORD: password
+    QBT_ADDR: http://192.168.1.100:8080
+    GTN_APIKEY: apikey
+    GTN_ADDR: http://192.168.1.100:8000
 ```
 
 ### none
 ```yaml
-  qbittorrent-port-forward-gluetun-server:
-    image: mjmeli/qbittorrent-port-forward-gluetun-server
-    container_name: qbittorrent-port-forward-gluetun-server
-    restart: unless-stopped
-    environment:
-      QBT_USERNAME: username
-      QBT_PASSWORD: password
-      QBT_ADDR: http://192.168.1.100:8080
-      GTN_ADDR: http://192.168.1.100:8000
+qbittorrent-port-forward-gluetun-server:
+  image: mjmeli/qbittorrent-port-forward-gluetun-server
+  container_name: qbittorrent-port-forward-gluetun-server
+  restart: unless-stopped
+  environment:
+    QBT_USERNAME: username
+    QBT_PASSWORD: password
+    QBT_ADDR: http://192.168.1.100:8080
+    GTN_ADDR: http://192.168.1.100:8000
 ```
 
 ## Development
